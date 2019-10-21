@@ -1,7 +1,7 @@
 <h1 align="center">
 	<br>
 	<br>
-	<img width="720" src="screenshot.png" alt="image">
+	<img width="720" src="screenshot.jpg" alt="image">
 	<br>
 	<br>
 	<br>
