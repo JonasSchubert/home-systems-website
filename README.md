@@ -1,12 +1,3 @@
-<h1 align="center">
-	<br>
-	<br>
-	<img width="720" src="screenshot_new.jpg" alt="image">
-	<br>
-	<br>
-	<br>
-</h1>
-
 # HomeSystemsWebsite
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -14,6 +5,10 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 Just a simple index.html for links of my local home systems
+
+| dark | light |
+| ---- | ----- |
+| ![screenshot_dark](./screenshot_dark.jpg) | ![screenshot_light](./screenshot_light.jpg) |
 
 ## Contributors
 
