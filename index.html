@@ -72,7 +72,7 @@
             </div>
 
             <div class="card">
-                <a href="http://192.168.178.39/game-collection" target="_blank"><img class="card-image" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgeekken.files.wordpress.com%2F2012%2F08%2Fmassiveboardgamecollection.jpeg&f=1&nofb=1" /></a>
+                <a href="http://192.168.178.39/game-collection" target="_blank"><img class="card-image" src="https://github.com/JonasSchubert/game-collection/blob/master/client/screenshots/details_light.jpg?raw=true" /></a>
                 <div class="card-details">
                     <h2 class="card-head">Game collection</h2>
                     <div style="display: flex;">
@@ -152,7 +152,7 @@
             </div>
 
             <div class="card">
-                <a href="http://192.168.178.39/i18n-service" target="_blank"><img class="card-image" src="https://d2jq2hx2dbkw6t.cloudfront.net/67/vue18.png" /></a>
+                <a href="http://192.168.178.39/i18n-service" target="_blank"><img class="card-image" src="https://github.com/JonasSchubert/i18n-service/blob/master/client/screenshots/home_light.jpg?raw=true" /></a>
                 <div class="card-details">
                     <h2 class="card-head">I18n Service</h2>
                     <div style="display: flex;">
@@ -183,7 +183,7 @@
             </div>
 
             <div class="card">
-                <a href="http://192.168.178.39/meter-tracker" target="_blank"><img class="card-image" src="https://img00.deviantart.net/2e68/i/2011/143/e/e/antique_cpu_meter_by_elmer_befuddled-d3gjlsn.png" /></a>
+                <a href="http://192.168.178.39/meter-tracker" target="_blank"><img class="card-image" src="https://github.com/JonasSchubert/meter-tracker/blob/master/client/screenshots/screenshot_light.jpg?raw=true" /></a>
                 <div class="card-details">
                     <h2 class="card-head">Meter tracker</h2>
                     <div style="display: flex;">
@@ -268,7 +268,7 @@
 				<span class="slider round"></span>
 			</label>
             I LOVE YOU
-            <div style="float: right;">20.05.06-0</div>
+            <div style="float: right;">20.05.12-0</div>
 		</div>
     </body>
 </html>
@@ -282,12 +282,13 @@ html {
 
 html.dark {
   background-color: #121212;
-  color: white;
+  color: #efefef;
 }
 
 .header {
-    background-color: #2196F3;
-    color: white;
+    background-color: #efefef;
+    box-shadow: 0 12px 12px -6px #343434;
+    color: #121212;
     font-size: 32px;
     font-weight: bold;
     height: 16px;
@@ -300,7 +301,9 @@ html.dark {
 }
 
 .header.dark {
-    background-color: #4921f3;
+    background-color: #121212;
+    box-shadow: 0 3px 2px -2px #ababab;
+    color: #efefef;
 }
 
 .container {
@@ -394,7 +397,7 @@ html.dark {
 }
 
 .footer {
-    background-color: #2196F3;
+    background-color: #121212;
     bottom: 0;
     color: white;
     font-size: 16px;
@@ -408,7 +411,7 @@ html.dark {
 }
 
 .footer.dark {
-    background-color: #4921f3;
+    background-color: #010101;
 }
 
 .left {
@@ -477,6 +480,7 @@ const body = document.getElementById("body");
 const header = document.getElementsByClassName("header");
 const footer = document.getElementsByClassName("footer");
 const cards = document.getElementsByClassName("card");
+const images = document.getElementsByTagName("img"); 
 
 const elements = [body, ...header, ...footer, ...cards];
 
@@ -490,6 +494,14 @@ function changeTheme() {
 			element.classList.add("dark");
 		} else {
 			element.classList.remove("dark");
+		}
+	}
+	
+	for (const image of images) {
+		if(darkTheme){
+			image.src = image.src.replace("light", "dark");
+		} else {
+			image.src = image.src.replace("dark", "light");
 		}
 	}
 }
